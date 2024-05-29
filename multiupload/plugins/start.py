@@ -16,7 +16,5 @@ async def help(e):
 **/anonfile** - Upload files to AnonFile.
 **/transfersh** - Upload files to TransferSH
 **/gofile** - Upload files to GoFile
-**/ufile** - Upload files to UFile
-
-__**Project of [HARP Tech](https://telegram.me/harp_tech)**__'''
+**/ufile** - Upload files to UFile'''
   await anjana.send_message(e.chat_id, helpmsg)
