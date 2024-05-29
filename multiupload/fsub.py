@@ -11,7 +11,7 @@ async def check_participant(user_id, chat_id, reply_id, cb=False):
 	except:
 		if not cb:
 			await anjana.send_message(user_id, '**You are not joined to my update channel. Please join to my update channel and start me again 👀**', buttons=[
-				Button.url('Join Now!', 't.me/harp_tech'),
+				Button.url('Join Now!', 't.me/movie_time_botonly),
 				Button.inline('Check', data='chk')
 			], reply_to=reply_id)
 		return False
@@ -21,7 +21,8 @@ s = ["CAADBAADxgkAAjQF0VL5yl4Td0utTgI",
 	"CAADBAADMggAAq0Q0FK1ZIUPLNxGcAI",
 	"CAADBAAD7AoAAr8i2VGALarwosnJIgI",
 	"CAADBAADrQoAAmzO0VFDq1aGz7rGHgI",
-	"CAADBAADbQgAAhI40VH51AABGZuwl74C"]
+	"CAADBAADbQgAAhI40VH51AABGZuwl74C",
+        "AAE2HOj44dRjAX71abYBpKYhBUe7u5JOuN4"]
 
 @anjana.on(events.CallbackQuery(pattern='chk'))
 async def _(event):
@@ -34,5 +35,5 @@ async def _(event):
 		await event.delete()
 		await anjana.send_file(event.chat_id, random.choice(s), reply_to=event)
 		await event.reply(f"Hey [{xx.first_name}]({xx.id}), I am **MultiUploader**", buttons=[
-				Button.url('Support Chat 💭', 't.me/harp_chat')
+				Button.url('Support Chat 💭', 't.me/movie_time_botonly')
 			])
