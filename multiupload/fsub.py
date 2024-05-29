@@ -11,7 +11,7 @@ async def check_participant(user_id, chat_id, reply_id, cb=False):
 	except:
 		if not cb:
 			await anjana.send_message(user_id, '**You are not joined to my update channel. Please join to my update channel and start me again 👀**', buttons=[
-				Button.url('Join Now!', 't.me/movie_time_botonly),
+				Button.url('Join Now!', 't.me/movie_time_botonly'),
 				Button.inline('Check', data='chk')
 			], reply_to=reply_id)
 		return False
