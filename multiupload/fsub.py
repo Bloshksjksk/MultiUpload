@@ -27,7 +27,7 @@ s = ["CAADBAADxgkAAjQF0VL5yl4Td0utTgI",
 @anjana.on(events.CallbackQuery(pattern='chk'))
 async def _(event):
 	try:
-		await anjana(p(user_id, event.sender_id))
+		await anjana(p(chat_id, user_id))
 	except:
 		await event.answer("💬 You are not Join. Please Join to Channel.", alert=True)
 	else:
